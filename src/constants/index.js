@@ -17,7 +17,7 @@ export const priceOptions = [
     1500000,
 ];
 
-export const bedOptions = [1, 2, 3, 4, 5, 6, 7, 9];
+export const bedOptions = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 export const sortOptions = ['price', 'bedrooms'];
 
