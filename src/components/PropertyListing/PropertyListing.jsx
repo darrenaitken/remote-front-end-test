@@ -6,13 +6,16 @@ import './PropertyListing.scss';
 
 const PropertyListing = ({ listings }) => {
     return (
-        <ul className="PropertyListing">
-            {listings.map((property) => (
-                <li key={property.id}>
-                    <PropertyCard {...property} />
-                </li>
-            ))}
-        </ul>
+        <div>
+            <div className="Results">Results: {listings.length}</div>
+            <ul className="PropertyListing">
+                {listings.map((property) => (
+                    <li key={property.id}>
+                        <PropertyCard {...property} />
+                    </li>
+                ))}
+            </ul>
+        </div>
     );
 };
 

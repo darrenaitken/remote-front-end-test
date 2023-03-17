@@ -2,12 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Dropdown.scss';
 
-const Dropdown = ({ options, onChange, label }) => {
+const Dropdown = ({ options, onChange, label, isStartUnspecified = false }) => {
     return (
         <div className="Dropdown">
             <label>
                 {label}
-                <select onChange={(e) => onChange(e.target.value)}>
+                <select onChange={(e) => onChange(e.target.value)} defaultValue={''}>
+                    {isStartUnspecified && <option disabled={true} value={''}></option>}
                     {options.map((option) => {
                         return (
                             <option key={option} value={option}>
@@ -25,6 +26,7 @@ Dropdown.propTypes = {
     options: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string])),
     onChange: PropTypes.func, // (selectedOption) => {}
     label: PropTypes.string,
+    isStartUnspecified: PropTypes.bool,
 };
 
 export default Dropdown;

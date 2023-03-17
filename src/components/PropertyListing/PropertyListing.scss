@@ -1,5 +1,12 @@
+.Results {
+    text-align: right;
+    margin-right: 1rem;
+}
+
 .PropertyListing {
-    li { 
+    padding-inline-start: 0;
+
+    li {
         list-style-type: none;
     }
 }
