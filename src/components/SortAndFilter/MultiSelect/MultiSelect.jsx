@@ -18,7 +18,7 @@ const MultiSelect = ({ options, onChange, label }) => {
 
     return (
         <div className="MultiSelect">
-            <div>{label}</div>
+            <div aria-label={label}>{label}</div>
             <fieldset onChange={handleOnChange}>
                 {options.map((option) => {
                     return (
